@@ -49,21 +49,23 @@ The front page highlights the three highest-rated books.
 
 ### Backend
 
-cd backend
+```bash
+backend
 npm install
 node kirjaServer.cjs
-
-The backend runs on:
+cdhe backend runs on:
 
 http://localhost:8080
 
 ### Frontend
 
-cd frontend
+cd
+```bash frontend
 npm install
 npm run dev
 
-The frontend runs on:
+T
+```he frontend runs on:
 
 http://localhost:5173
 
@@ -73,7 +75,8 @@ http://localhost:5173
 
 - JavaScript
 - React
-- Vite
+-
+- React RouterVite
 - Material UI
 
 ### Backend
