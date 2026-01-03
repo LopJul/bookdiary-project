@@ -1,12 +1,90 @@
-# React + Vite
+# Book Diary Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
 
-Currently, two official plugins are available:
+This is a full-stack web application with a frontend-focused single page application (SPA) and a lightweight backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It demonstrates the use of React, REST APIs and SQLite in a book diary application.
 
-## Expanding the ESLint configuration
+This application helps users keep track of books they have read.
+Users can add, edit and delete books, as well as monitor their progress toward a reading goal.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The front page highlights the three highest-rated books.
+
+### Front page
+
+![Front page](/images/bookdiary_frontpage.png)
+
+### Add Book form
+
+![Add book form](/images/book_form.png)
+
+### Search and List Books
+
+![Search and list](/images/search_list.png)
+
+### Charts page
+
+![Charts](/images/charts.png)
+
+## API Endpoints
+
+| Method | Endpoint          | Description       |
+| ------ | ----------------- | ----------------- |
+| GET    | /kirja/all        | Get all books     |
+| GET    | /kirja/one/:id    | Get a single book |
+| POST   | /kirja/add        | Add a new book    |
+| PUT    | /kirja/edit/:id   | Edit a book       |
+| DELETE | /kirja/delete/:id | Delete a book     |
+
+## Key Features
+
+- React-based single page application
+- Full CRUD functionality for books
+- REST API backend built with Express
+- SQLite database for persistent storage
+- Image upload support for book images
+
+## Installation & Running
+
+### Backend
+
+cd backend
+npm install
+node kirjaServer.cjs
+
+The backend runs on:
+
+http://localhost:8080
+
+### Frontend
+
+cd frontend
+npm install
+npm run dev
+
+The frontend runs on:
+
+http://localhost:5173
+
+## Technologies Used
+
+### Frontend
+
+- JavaScript
+- React
+- Vite
+- Material UI
+
+### Backend
+
+- Node.js
+- Express
+- SQLite
+- Multer
+
+## Notes
+
+- The application demonstrates end-to-end data flow: from frontend form submission through a REST API to SQLite database, including handling file uploads with Multer
+- Uploaded images are stored locally on the backend server, and only image filename is saved in the database
+- This project was created as part of a frontend development course
